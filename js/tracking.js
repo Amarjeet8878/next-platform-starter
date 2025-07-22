@@ -6,7 +6,8 @@ function trackShipment() {
     result.innerHTML = "<span style='color:red;'>Please enter a Tracking ID.</span>";
     return;
   }
-const apiUrl = "https://script.google.com/macros/s/AKfycbzPG73_493cP_6_L0BmTs5O_DwPpS8kQa9GfUc-KUKeYleIFX6pxoQnB0ANzVvv9dKO/exec?id=" + trackingID;
+
+  const apiUrl = "https://script.google.com/macros/s/AKfycbzPG73_493cP_6_L0BmTs5O_DwPpS8kQa9GfUc-KUKeYleIFX6pxoQnB0ANzVvv9dKO/exec?id=" + trackingID;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -30,4 +31,5 @@ const apiUrl = "https://script.google.com/macros/s/AKfycbzPG73_493cP_6_L0BmTs5O_
       console.error("Tracking error:", error);
     });
 }
+
 document.getElementById("trackButton").addEventListener("click", trackShipment);
