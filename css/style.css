@@ -120,3 +120,54 @@ footer {
     display: block;
   }
 }
+.logo-small {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.truck-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.truck-gallery img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#trackingResult table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#trackingResult table, th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.pod-button {
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}

@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jay Balaji Cargo - Track Your Shipment</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- Header -->
   <header class="navbar">
-    <div class="logo">Jay Balaji Cargo</div>
-    <nav class="nav-links" id="navLinks">
+    <div class="logo-title">
+      <img src="assets/Jaybalaji.png" alt="Logo" class="logo-small"/>
+      <span class="company-name">Jay Balaji Cargo</span>
+    </div>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
   </header>
 
-  <!-- Hero Image -->
-  <div class="hero" style="background: url('assets/Jaybalaji.png') center/contain no-repeat; height: 300px; margin: 20px auto; max-width: 600px;"></div>
+  <!-- Hero Section -->
+  <div class="hero"></div>
 
-  <!-- Shipment Tracking Section -->
+  <!-- Tracking Section -->
   <main>
     <section class="tracking-section">
       <h2>Track Your Shipment</h2>
-      <input type="text" id="trackingInput" placeholder="Enter your Tracking ID" />
-      <br />
+      <input type="text" id="trackingInput" placeholder="Enter Tracking ID"/>
       <button id="trackButton">Track Now</button>
-      <div id="trackingResult"></div>
-    </section>
-
-    <!-- Services Summary -->
-    <section class="content">
-      <h2>Our Services</h2>
-      <p>Fast, secure, and reliable delivery solutions including parcel transport, full truckload, warehousing, and live shipment tracking. Trusted by thousands across India.</p>
+      <div id="trackingResult" style="margin-top: 20px;"></div>
     </section>
   </main>
+
+  <!-- Truck Images Section -->
+  <section class="content">
+    <h2>Our Fleet</h2>
+    <div class="truck-gallery">
+      <img src="assets/truck1.jpg" alt="Truck 1"/>
+      <img src="assets/truck2.jpg" alt="Truck 2"/>
+      <img src="assets/truck3.jpg" alt="Truck 3"/>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -46,13 +52,6 @@
     <p>Email: support@jaybalajicargo.com | WhatsApp: +91-9876543210</p>
   </footer>
 
-  <!-- Script -->
   <script src="js/tracking.js"></script>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-  </script>
 </body>
 </html>
