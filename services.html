@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Jay Balaji Cargo</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #002244;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-weight: 600;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      flex: 1 1 calc(45% - 20px);
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover, .service-card.active {
+      transform: scale(1.05);
+      background-color: #e6f0ff;
+      border-color: #0047AB;
+    }
+
+    .service-details {
+      display: none;
+      background-color: #ffffff;
+      border-left: 5px solid #0047AB;
+      padding: 25px 30px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service-details.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .service-details h2 {
+      color: #0047AB;
+      margin-top: 0;
+    }
+
+    .service-details p, .service-details ul {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .service-details ul {
+      padding-left: 20px;
+    }
+
+    .service-details ul li::before {
+      content: "✔️ ";
+    }
+
+    @media (max-width: 768px) {
+      .service-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo-title">
+      <img src="assets/Jaybalaji.png" alt="Logo" class="logo-small"/>
+      <span class="company-name">Jay Balaji Cargo</span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1>Our Services</h1>
+
+    <div class="service-grid">
+      <div class="service-card" onclick="showService('ftl')">✅ Full Truck Load (FTL)</div>
+      <div class="service-card" onclick="showService('ptl')">✅ Part Load Shipment (PTL)</div>
+      <div class="service-card" onclick="showService('tpl')">✅ 3PL Services</div>
+      <div class="service-card" onclick="showService('custom')">✅ Customized Solutions</div>
+    </div>
+
+    <div id="ftl" class="service-details">
+      <h2>Full Truck Load (FTL)</h2>
+      <p><strong>Reliable. Efficient. Nationwide.</strong></p>
+      <p>We offer dedicated Full Truck Load (FTL) services for businesses that require exclusive use of a vehicle for large shipments. Whether transporting industrial goods or high-value cargo, we ensure:</p>
+      <ul>
+        <li>Dedicated vehicle capacity</li>
+        <li>Direct route delivery (no transshipment)</li>
+        <li>Reduced transit time</li>
+        <li>Maximum safety for fragile cargo</li>
+      </ul>
+      <p>With our fleet of 10+ owned trucks and 50+ partner vehicles, we guarantee smooth, scalable delivery across India.</p>
+    </div>
+
+    <div id="ptl" class="service-details">
+      <h2>Part Load Shipment (PTL)</h2>
+      <p><strong>Cost-Effective. Flexible. Smart Shipping.</strong></p>
+      <p>Our PTL (Part Truck Load) solution is ideal for clients who need to move smaller loads efficiently without paying for an entire truck. We offer:</p>
+      <ul>
+        <li>Shared truck space at reduced cost</li>
+        <li>Consolidated shipment handling</li>
+        <li>Scheduled dispatches from Pune and major hubs</li>
+        <li>Real-time tracking and support</li>
+      </ul>
+      <p>Safe, punctual delivery — even when your shipment is small.</p>
+    </div>
+
+    <div id="tpl" class="service-details">
+      <h2>3PL (Third-Party Logistics) Services</h2>
+      <p><strong>Integrated Logistics. Simplified Operations.</strong></p>
+      <p>Jay Balaji Cargo offers 3PL services for companies looking to outsource their entire logistics process. We handle everything from warehousing to delivery:</p>
+      <ul>
+        <li>Inventory management & dispatch</li>
+        <li>Warehousing at Moshi, Pune (Warehouse 1 & 2)</li>
+        <li>Daily order fulfillment</li>
+        <li>Transport coordination and last-mile delivery</li>
+        <li>Custom SLAs and contract-based service</li>
+      </ul>
+      <p>Let us take charge of your supply chain while you focus on growth.</p>
+    </div>
+
+    <div id="custom" class="service-details">
+      <h2>Customized Supply Chain Solutions</h2>
+      <p><strong>Tailored. Scalable. Built Around You.</strong></p>
+      <p>Every customer is different. We design supply chain strategies around your specific product, volume, and destination needs:</p>
+      <ul>
+        <li>Route planning & fleet allocation</li>
+        <li>Dedicated account handling</li>
+        <li>End-to-end logistics tracking</li>
+        <li>Flexible pickup, delivery, warehousing</li>
+      </ul>
+      <p>We deliver transport solutions that support your business — not just move goods.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jay Balaji Cargo | All Rights Reserved</p>
+    <p>Email: support@jaybalajicargo.com | WhatsApp: +91-9876543210</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function showService(id) {
+      const services = ['ftl', 'ptl', 'tpl', 'custom'];
+      services.forEach(service => {
+        document.getElementById(service).classList.remove('active');
+        document.querySelector(`[onclick="showService('${service}')"]`).classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`[onclick="showService('${id}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
