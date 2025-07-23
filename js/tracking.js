@@ -33,3 +33,7 @@ function trackShipment() {
 }
 
 document.getElementById("trackButton").addEventListener("click", trackShipment);
+// Toggle Menu for Mobile
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
