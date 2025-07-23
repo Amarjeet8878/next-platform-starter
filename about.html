@@ -4,12 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Jay Balaji Cargo</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    .container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+    h1, h2, h3 { color: #002244; margin-bottom: 15px; }
+    p { margin: 10px 0; line-height: 1.7; }
+    ul { padding-left: 20px; margin-bottom: 25px; }
+    li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: white;
+      border-left: 5px solid #0047AB;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .ticker {
+      background: #002244;
+      color: white;
+      padding: 12px 20px;
+      margin: 25px 0;
+      font-size: 16px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 20s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    blockquote {
+      background: #f1f1f1;
+      border-left: 4px solid #0047AB;
+      margin: 20px 0;
+      padding: 15px 20px;
+      font-style: italic;
+    }
+
+    blockquote::before { content: "💬 "; }
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="navbar">
     <div class="logo-title">
       <img src="assets/Jaybalaji.png" alt="Logo" class="logo-small"/>
@@ -24,37 +79,67 @@
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
-  <!-- About Section -->
-  <main class="content">
-    <h2>About Jay Balaji Cargo</h2>
-    <p>
-      <strong>Jay Balaji Cargo</strong> was established in 2019 by <strong>Mr. Bipin Mishra</strong> with a vision to simplify and strengthen logistics and transportation across India. Headquartered at:
-    </p>
-    <p>
-      <em>Gate No. 269, 403 - Borhade Wadi, Flower City,<br>
-      Moshi, Tal Khed, District - Pune, Maharashtra - 410501</em>
-    </p>
-    <p>
-      Over the years, we have grown into a reliable and well-connected logistics partner offering comprehensive solutions including:
-    </p>
-    <ul>
-      <li>Full Load Transportation</li>
-      <li>Part Load Shipment</li>
-      <li>3PL (Third Party Logistics) Services</li>
-      <li>End-to-End Supply Chain Solutions</li>
-    </ul>
-    <p>
-      With a dedicated fleet of <strong>10+ owned vehicles</strong> and a robust network of <strong>50+ logistics partners</strong>, we provide seamless transport services to every corner of India. Our commitment to timely delivery, safety, and customer satisfaction has helped us build lasting relationships with clients from diverse industries.
-    </p>
+  <main class="container">
+    <h1>About Us</h1>
 
-    <h3>Our Warehouses in Pune</h3>
+    <p><strong>Jay Balaji Cargo</strong> was established in 2019 by <strong>Mr. Bipin Mishra</strong> with the mission to deliver reliable, responsive, and high-quality logistics solutions across India.</p>
+
+    <p>Based out of Moshi, Pune, our registered office is located at:</p>
+    <p><em>Gate No. 269, 403 – Borhade Wadi, Flower City,<br> Tal Khed, District Pune, Maharashtra – 410501</em></p>
+
+    <div class="highlight-box">
+      <h3>We provide a full spectrum of transport and logistics services, including:</h3>
+      <ul>
+        <li>✅ Full Truck Load (FTL)</li>
+        <li>✅ Part Load Shipment (PTL)</li>
+        <li>✅ 3PL (Third-Party Logistics) Services</li>
+        <li>✅ Customized Transport & Supply Chain Solutions</li>
+      </ul>
+
+      <p>With <strong>10+ company-owned vehicles</strong> and a strong network of <strong>50+ trusted logistics partners</strong>, we are capable of servicing all corners of India with precision, punctuality, and care.</p>
+    </div>
+
+    <h3 style="margin-top: 30px;">We are proud to be logistics partners for:</h3>
+    <div class="ticker"><span>
+      Saint Gobain, Dextra, Span Pumps, Unominda, Diado DMS India Pvt. Ltd., Unisource Papers, Majestic Carbon, Techno Seal, Frech India, Metal Intrigation, Sankalp Technology, Gujarat Chemical, JK Papers, Elkem South Asia, and more.
+    </span></div>
+
+    <h3>Our Key Operational Hubs</h3>
     <ul>
-      <li><strong>Jay Balaji Cargo Warehouse 1</strong> - Chimbi Phata, Near Shell Petrol Pump, Moshi, Pune</li>
-      <li><strong>Jay Balaji Cargo Warehouse 2</strong> - Chimbi Phata, Near Shell Petrol Pump, Moshi, Pune</li>
+      <li><strong>Jay Balaji Cargo – Warehouse 1</strong>, Chimbhi Phata, Near Shell Petrol Pump, Moshi, Pune</li>
+      <li><strong>Jay Balaji Cargo – Warehouse 2</strong>, Chimbhi Phata, Near Shell Petrol Pump, Moshi, Pune</li>
     </ul>
+
+    <h2>Mission</h2>
+    <p>To become a leading logistics partner by providing dependable, innovative, and scalable transport solutions that support our clients’ business growth across India.</p>
+
+    <h2>Vision</h2>
+    <p>To be recognized as the most trusted name in Indian logistics — powered by technology, driven by relationships, and defined by service excellence.</p>
+
+    <h2>Core Values</h2>
+    <ul>
+      <li><strong>Integrity</strong> – We act with honesty, transparency, and fairness in all we do.</li>
+      <li><strong>Reliability</strong> – We deliver what we promise, on time, every time.</li>
+      <li><strong>Customer Focus</strong> – We listen, adapt, and go the extra mile to exceed expectations.</li>
+      <li><strong>Innovation</strong> – We embrace smart logistics practices to offer scalable, efficient solutions.</li>
+      <li><strong>Partnership</strong> – We grow with our clients, vendors, and team through long-term collaboration.</li>
+    </ul>
+
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      "Jay Balaji Cargo has been a dependable logistics partner for us. Their commitment to timelines and professionalism stands out."  
+      — <strong>Logistics Head, Span Pumps</strong>
+    </blockquote>
+    <blockquote>
+      "Whether it’s urgent delivery or large-scale shipment, the Jay Balaji team ensures smooth handling every time."  
+      — <strong>Supply Chain Manager, Saint Gobain</strong>
+    </blockquote>
+    <blockquote>
+      "They’ve supported our nationwide transport needs with flexibility and quality service. Highly recommended!"  
+      — <strong>Operations Team, Diado DMS India Pvt. Ltd.</strong>
+    </blockquote>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Jay Balaji Cargo | All Rights Reserved</p>
     <p>Email: support@jaybalajicargo.com | WhatsApp: +91-9876543210</p>
