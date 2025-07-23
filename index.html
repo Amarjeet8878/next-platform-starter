@@ -2,29 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jay Balaji Cargo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Balaji Cargo - Track Your Shipment</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+    body { background-color: #f4f4f4; color: #333; }
+    header { background-color: #002244; color: #fff; padding: 20px; text-align: center; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 30px; margin-top: 10px; }
+    nav a { color: white; text-decoration: none; font-weight: 500; }
+    .hero { background: url('assets/Jaybalaji.png') center/contain no-repeat; height: 300px; margin: 20px auto; max-width: 600px; }
+    .content { text-align: center; padding: 20px; }
+    .track-box { background: #fff; max-width: 500px; margin: 20px auto; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input[type="text"] { padding: 10px; width: 80%; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; margin-top: 10px; background-color: #002244; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    footer { background-color: #002244; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
 </head>
 <body>
-
   <header>
-    <img src="assets/Jaybalaji.png" alt="Jay Balaji Cargo Logo" class="logo" />
     <h1>Jay Balaji Cargo</h1>
-    <p>Trusted Logistics Across India</p>
+    <p>Delivering Trust Across India</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="tracking-section">
-      <h2>Track Your Shipment</h2>
-      <input type="text" id="trackingInput" placeholder="Enter Tracking ID" />
-      <button onclick="trackShipment()">Track</button>
-      <div id="trackingResult"></div>
-    </section>
-  </main>
+  <div class="hero"></div>
+
+  <section class="content">
+    <h2>Track Your Shipment</h2>
+    <div class="track-box">
+      <input type="text" id="trackingInput" placeholder="Enter your Tracking ID" />
+      <br />
+      <button id="trackButton">Track Now</button>
+      <div id="trackingResult" style="margin-top: 15px;"></div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Our Services</h2>
+    <p>Fast, secure, and reliable delivery solutions including parcel transport, full truckload, warehousing, and live shipment tracking. Trusted by thousands across India.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Jay Balaji Cargo. All rights reserved.</p>
+    <p>&copy; 2025 Jay Balaji Cargo | All Rights Reserved</p>
+    <p>Email: support@jaybalajicargo.com | WhatsApp: +91-9876543210</p>
   </footer>
 
   <script src="js/tracking.js"></script>
