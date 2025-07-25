@@ -175,7 +175,8 @@ button:hover {
     display: block;
   }
 }
-/* Progress Bar Styles */
+
+/* --- Progress Bar for Tracking --- */
 .progress-container {
   display: flex;
   justify-content: space-between;
@@ -183,6 +184,8 @@ button:hover {
   margin: 30px auto 20px;
   max-width: 600px;
   padding: 0 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .progress-step {
@@ -200,6 +203,9 @@ button:hover {
   line-height: 30px;
   font-weight: bold;
   color: white;
+  position: relative;
+  z-index: 1;
+  transition: background-color 0.4s ease;
 }
 
 .progress-step.active .circle {
@@ -210,11 +216,12 @@ button:hover {
   content: "";
   position: absolute;
   top: 15px;
-  right: -50%;
+  left: 50%;
   height: 4px;
   width: 100%;
   background-color: #ccc;
   z-index: -1;
+  transition: background-color 0.4s ease;
 }
 
 .progress-step:last-child::after {
