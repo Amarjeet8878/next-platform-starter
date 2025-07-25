@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -12,17 +13,65 @@ header {
   padding: 20px 10px;
 }
 
-.logo {
-  width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
-}
-
 main {
   padding: 30px 15px;
 }
 
+footer {
+  background-color: #222;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 40px;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0047AB;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-small {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* --- Tracking Section --- */
 .tracking-section {
   max-width: 400px;
   margin: 0 auto;
@@ -37,12 +86,13 @@ input[type="text"] {
   padding: 10px;
   font-size: 16px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 25px;
   font-size: 16px;
   background-color: #0047AB;
@@ -52,104 +102,16 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #003a8c;
+}
+
 #trackingResult {
   margin-top: 20px;
   font-size: 16px;
 }
 
-footer {
-  background-color: #222;
-  color: white;
-  padding: 15px 10px;
-  margin-top: 40px;
-}
-/* --- Navbar Styling --- */
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: #004080;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #004080;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    padding: 10px;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-.logo-small {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-}
-
-.company-name {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.truck-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.truck-gallery img {
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
+/* --- Tracking Table --- */
 #trackingResult table {
   width: 100%;
   border-collapse: collapse;
@@ -171,33 +133,27 @@ footer {
   border-radius: 5px;
   text-decoration: none;
 }
-/* Responsive Navbar Styles */
-.navbar {
+
+.pod-button:hover {
+  background-color: #005bb5;
+}
+
+/* --- Truck Gallery --- */
+.truck-gallery {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0047AB;
-  padding: 10px 20px;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
+.truck-gallery img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Responsive for mobile */
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -218,4 +174,53 @@ footer {
   .hamburger {
     display: block;
   }
+}
+/* Progress Bar Styles */
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto 20px;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+.progress-step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.progress-step .circle {
+  height: 30px;
+  width: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 auto 5px;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.progress-step.active .circle {
+  background-color: #007bff;
+}
+
+.progress-step::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: -50%;
+  height: 4px;
+  width: 100%;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.progress-step:last-child::after {
+  display: none;
+}
+
+.progress-step.active::after {
+  background-color: #007bff;
 }
