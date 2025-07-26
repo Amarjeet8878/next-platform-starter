@@ -249,3 +249,39 @@ button:hover {
     content: none;
   }
 }
+.contact-section {
+  padding: 30px 20px;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #0047AB;
+}
+
+.contact-box {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-box a {
+  color: #0047AB;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
